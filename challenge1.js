@@ -62,7 +62,8 @@ function parkingFeeCalculation(parkingTime, parkingDay, parkingSpecial) {
   }
 
 console.log(parkingFeeCalculation(2, "saturday", false));
-console.log(parkingFeeCalculation(6, "Sunday", true));
+console.log(parkingFeeCalculation(6, "sunday", true));
+console.log(parkingFeeCalculation(10, "selasa", true));
 
 
 console.log("============ Soal Tiga ============");
@@ -108,7 +109,8 @@ function festSchedule(festDay, festWeather, festTemperature, festSpeed) {
   return festList + ".";
 }
 
-console.log(festSchedule("SATURDAY", "RAINING", 23, 24));
-console.log(festSchedule("SATURDAY", "RAINING", 25, 10));
-console.log(festSchedule("SUNDAY", "SUNNY", 30, 8));
+console.log(festSchedule("saturday", "raining", 23, 24));
+console.log(festSchedule("saturday", "raining", 25, 10));
+console.log(festSchedule("sunday", "sunny", 30, 8));
+console.log(festSchedule("sunday", "cerah", 17, 12));
 
