@@ -61,9 +61,47 @@ function parkingFeeCalculation(parkingTime, parkingDay, parkingSpecial) {
   
     return parkingFee;
   }
-  
-  console.log(parkingFeeCalculation(2, "saturday", false));
-  console.log(parkingFeeCalculation(6, "Sunday", true));
+
+console.log(parkingFeeCalculation(2, "saturday", false));
+console.log(parkingFeeCalculation(6, "Sunday", true));
 
 
+console.log("============ Soal Tiga ============");
+
+function festSchedule(festDay, festWeather, festTemperature, festSpeed) {
+  if (typeof festDay !== "string" || typeof festWeather !== "string" || typeof festTemperature !== "number" || typeof festSpeed !== "number") {
+    return "INVALID INPUT, DAY MUST BE A STRING, WEATHER MUST BE A STRING, TEMPERATURE MUST BE A NUMBER, AND WIND SPEED MUST BE A NUMBER.";
+  }
+  festDay = festDay.toUpperCase();
+  const valid_festDay = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"];
+  if (!valid_festDay.includes(festDay)) {
+    return "INVALID INPUT, DAY MUST BE BETWEEN MONDAY TO SUNDAY.";
+  }
+  festWeather = festWeather.toUpperCase();
+  const valid_festWeather = ["SUNNY", "RAINING"];
+  if (!valid_festWeather.includes(festWeather)) {
+    return "INVALID INPUT, WEATHER MUST BE SUNNY OR RAINING.";
+  }
+  let festList = "FESTIVAL: ART EXHIBITION";
+  if (festWeather === "RAINING" && festSpeed > 20) {
+    return festList;
+  }
+  if (festWeather === "RAINING" && festSpeed <= 20) {
+    festList += ", FESTIVAL INDOOR";
+  }
+  if (festTemperature < 5) {
+    festList += ", FESTIVAL INDOOR";
+  }
+  if (festWeather === "SUNNY" && festTemperature > 25) {
+    festList += ", FESTIVAL ICE CREAM";
+  }
+  if (festDay === "SUNDAY" && festWeather === "SUNNY") {
+    festList += ", EVENING MARATHON";
+  }
+  return festList + ".";
+}
+
+console.log(festSchedule("SATURDAY", "RAINING", 23, 24));
+console.log(festSchedule("SATURDAY", "RAINING", 25, 10));
+console.log(festSchedule("SUNDAY", "SUNNY", 30, 8));
 
