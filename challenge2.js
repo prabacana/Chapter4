@@ -70,6 +70,8 @@ for (let i = diamondGenerate - 1; diamondAxis_Y >= 1; diamondAxis_Y--) {
     console.log(diamondValue);
 }
 
+console.log(breakVoid)
+
 
 //Test 5
 
@@ -77,7 +79,7 @@ console.log(" ===== Test 5 ===== ")
 
 const abominationAxis_Y = 5;
 
-for (let i = 1; i <= numberOfRows; i++) {
+for (let i = 1; i <= abominationAxis_Y; i++) {
     let row = '1';
     for (let j = 2; j <= i; j++) {
         row += `*${j}`;
