@@ -41,3 +41,46 @@ console.log(triangleRow);
 
 console.log(breakVoid)
 
+
+//Test 4
+
+console.log(" ===== Test 4 ===== ")
+
+const diamondGenerate = 5;
+const diamondVoid = " ";
+
+for (let diamondAxis_Y = 1; diamondAxis_Y <= diamondGenerate; diamondAxis_Y++) {
+    let diamondValue = "";
+    for (let diamondVoid_Axis_Y = diamondGenerate; diamondVoid_Axis_Y > diamondAxis_Y; diamondVoid_Axis_Y--) {
+        diamondValue += diamondVoid;
+    }
+    for (let diamondAxis_X = 1; diamondAxis_X <= diamondAxis_Y * 2 - 1; diamondAxis_X++) {
+        diamondValue += "*";
+    }
+    console.log(diamondValue);
+}
+for (let i = diamondGenerate - 1; diamondAxis_Y >= 1; diamondAxis_Y--) {
+    let diamondValue = "";
+    for (let diamondVoid_Axis_Y = diamondGenerate; diamondVoid_Axis_Y > i; diamondVoid_Axis_Y--) {
+        diamondValue += diamondVoid;
+    }
+    for (let diamondAxis_X = 1; diamondAxis_X <= diamondAxis_Y * 2 - 1; diamondAxis_X++) {
+        diamondValue += "*";
+    }
+    console.log(diamondValue);
+}
+
+
+//Test 5
+
+console.log(" ===== Test 5 ===== ")
+
+const abominationAxis_Y = 5;
+
+for (let i = 1; i <= numberOfRows; i++) {
+    let row = '1';
+    for (let j = 2; j <= i; j++) {
+        row += `*${j}`;
+    }
+    console.log(row);
+}
