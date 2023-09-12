@@ -59,9 +59,9 @@ for (let diamondAxis_Y = 1; diamondAxis_Y <= diamondGenerate; diamondAxis_Y++) {
     }
     console.log(diamondValue);
 }
-for (let i = diamondGenerate - 1; diamondAxis_Y >= 1; diamondAxis_Y--) {
+for (let diamondAxis_Y = diamondGenerate - 1; diamondAxis_Y >= 1; diamondAxis_Y--) {
     let diamondValue = "";
-    for (let diamondVoid_Axis_Y = diamondGenerate; diamondVoid_Axis_Y > i; diamondVoid_Axis_Y--) {
+    for (let diamondVoid_Axis_Y = diamondGenerate; diamondVoid_Axis_Y > diamondAxis_Y; diamondVoid_Axis_Y--) {
         diamondValue += diamondVoid;
     }
     for (let diamondAxis_X = 1; diamondAxis_X <= diamondAxis_Y * 2 - 1; diamondAxis_X++) {
@@ -79,10 +79,13 @@ console.log(" ===== Test 5 ===== ")
 
 const abominationAxis_Y = 5;
 
-for (let i = 1; i <= abominationAxis_Y; i++) {
-    let row = '1';
-    for (let j = 2; j <= i; j++) {
-        row += `*${j}`;
+for (let abominationAxis_X = 1; abominationAxis_X <= abominationAxis_Y; abominationAxis_X++) {
+    let abominationNumber = '1';
+    for (let abominationStar = 2; abominationStar <= abominationAxis_X; abominationStar++) {
+        abominationNumber += `*${abominationStar}`;
     }
-    console.log(row);
+    console.log(abominationNumber);
 }
+
+console.log(breakVoid)
+
